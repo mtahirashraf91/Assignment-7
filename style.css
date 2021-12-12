@@ -1,0 +1,26 @@
+#Heading {
+    background-color: rgb(86, 91, 122);
+  justify-content: center;
+  color: rgb(255, 0, 0);
+  margin-bottom: 0px;
+}
+#h1 {
+  color: red;
+}
+.statment {
+  color: rgb(250, 4, 4);
+}
+.button {
+    color: darkred;
+    height: 25px;
+  /* color: rgb(248, 3, 3); */
+}
+.part{
+    margin-top: 0px;
+    background-color: yellow;
+border: 10px;
+border-color: red;
+padding: 10px;
+padding-left: 10px;
+
+}
