@@ -7,7 +7,13 @@ function maxOfTwoNo() {
   var num2 = dom.getElementById("num2");
   var number2 = parseInt(num2.value);
 
-  if (number1 > number2) {
+  if (num1.value == "" || num2.value == "") {
+      var result = "Result : Please fill all the inputs!";
+        output1.innerHTML = result;
+    }else if (number1 == number2) {
+      result = "Result : Numbers are equal.";
+      output1.innerHTML = result;
+    }else if (number1 > number2) {
     var result1 = "Result : 1st number (";
     var result2 = ") is greater than 2nd number (";
     var result3 = ").";
@@ -19,13 +25,7 @@ function maxOfTwoNo() {
     var result3 = ").";
     var result = result1 + number2 + result2 + number1 + result3;
     output1.innerHTML = result;
-  } else if (number1 == number2) {
-    result = "Result : Numbers are equal.";
-    output1.innerHTML = result;
-  } else if (number1 == "") {
-    result = "Result : Please write 2 numbers!";
-    output1.innerHTML = result;
-  } else {
+  }  else {
     result = "Result : Please write a number!";
     output1.innerHTML = result;
   }
@@ -42,7 +42,14 @@ function maxOfThreeNo() {
   var num3 = dom.getElementById("n3");
   var number3 = parseInt(num3.value);
 
-  if (number1 > number2 && number1 > number3) {
+  
+  if (num1.value == "" || num2.value == "" || num3.value == "") {
+    var result = "Result : Please fill all the inputs!";
+      output2.innerHTML = result;
+  }else if (number1 == number2 || number2 == number3 || number1 == number3) {
+    result = "Result : Numbers are equal.";
+    output2.innerHTML = result;
+  } else if (number1 > number2 && number1 > number3) {
     var result1 = "Result : 1st number (";
     var result2 = ") is the greatest number.";
     var result = result1 + number1 + result2;
@@ -57,10 +64,7 @@ function maxOfThreeNo() {
     var result2 = ") is the greatest number.";
     var result = result1 + number3 + result2;
     output2.innerHTML = result;
-  } else if (number1 == number2 || number2 == number3 || number1 == number3) {
-    result = "Result : Numbers are equal.";
-    output2.innerHTML = result;
-  } else {
+  } else  {
     result = "Result : Please write a number!";
     output2.innerHTML = result;
   }
@@ -72,7 +76,10 @@ function Integertype() {
   var num1 = dom.getElementById("no.1");
   var number1 = parseFloat(num1.value);
 
-  if (number1 > 0) {
+  if (num1.value == "" || num1.value >= 'A' || num1.value >= ' ') {
+    var result = "Result : Please write a number!";
+      output3.innerHTML = result;
+  }else if (number1 > 0) {
     var result1 = "Result : Number (";
     var result2 = ") is positive.";
     var result = result1 + number1 + result2;
@@ -100,7 +107,10 @@ function divisible() {
   var num1 = dom.getElementById("number1");
   var number1 = parseFloat(num1.value);
 
-  if (number1 % (5 && 11) == 0) {
+  if (num1.value == "" || num1.value >= 'A' || num1.value >= ' ') {
+    var result = "Result : Please write a number!";
+      output4.innerHTML = result;
+  }else if (number1 % (5 && 11) == 0) {
     var result1 = "Result : Number (";
     var result2 = ") is divisible by 5 and 11.";
     var result = result1 + number1 + result2;
@@ -123,7 +133,10 @@ function evenOdd() {
   var num1 = dom.getElementById("number");
   var number1 = parseFloat(num1.value);
 
-  if (number1 % 2 == 0) {
+  if (num1.value == "" || num1.value >= 'A' || num1.value >= ' ') {
+    var result = "Result : Please write a number!";
+      output5.innerHTML = result;
+  }else if (number1 % 2 == 0) {
     var result1 = "Result : Number (";
     var result2 = ") is Even.";
     var result = result1 + number1 + result2;
@@ -144,94 +157,41 @@ function evenOdd() {
 function leapYear() {
   var dom = document;
   var num1 = dom.getElementById("year");
-  var number1 = parseFloat(num1.value);
-
-  if (number1 % 4 == 0) {
+  var number1 = num1.value;
+  
+if (number1 == "" || number1 >= 'A' || num1.value >= ' ') {
+  var result = "Result : Please write any year!";
+    output6.innerHTML = result;
+}else if (number1 % 4 == 0) {
     var result1 = "Result : Year (";
-    var result2 = ") is leap year.";
+    var result2 = ") is a leap year.";
     var result = result1 + number1 + result2;
     output6.innerHTML = result;
-  } else if (number1 % 4 !== 0) {
+  } else if (number1 % 4 != 0) {
     var result1 = "Result : Year (";
-    var result2 = ") is not leap year.";
+    var result2 = ") is not a leap year.";
     var result = result1 + number1 + result2;
     output6.innerHTML = result;
-  } else {
-    result = "Result : Please write a number!";
-    output6.innerHTML = result;
-  }
+  } 
 }
 
 // 7. Write a js program to check whether a character is alphabet or not.
 
-function chekAlphabet(params) {
+function chekAlphabet() {
   var dom = document;
   var num1 = dom.getElementById("character");
   var number1 = (num1.value);
 
-  if 
-    (number1 > 'A' 
-      // number1 ==
-    //   "a" ||
-    //   "A" ||
-    //   "b" ||
-    //   "B" ||
-    //   "c" ||
-    //   "C" ||
-    //   "d" ||
-    //   "D" ||
-    //   "e" ||
-    //   "E" ||
-    //   "f" ||
-    //   "F" ||
-    //   "g" ||
-    //   "G" ||
-    //   "h" ||
-    //   "H" ||
-    //   "i" ||
-    //   "I" ||
-    //   "j" ||
-    //   "J" ||
-    //   "k" ||
-    //   "K" ||
-    //   "l" ||
-    //   "L" ||
-    //   "m" ||
-    //   "M" ||
-    //   "n" ||
-    //   "N" ||
-    //   "o" ||
-    //   "O" ||
-    //   "p" ||
-    //   "P" ||
-    //   "q" ||
-    //   "Q" ||
-    //   "r" ||
-    //   "R" ||
-    //   "s" ||
-    //   "S" ||
-    //   "t" ||
-    //   "T" ||
-    //   "u" ||
-    //   "U" ||
-    //   "v" ||
-    //   "V" ||
-    //   "w" ||
-    //   "W" ||
-    //   "x" ||
-    //   "X" ||
-    //   "y" ||
-    //   "Y" ||
-    //   "z" ||
-      // "Z"
-      )
-   {
+
+    if (number1 == "") {
+      var result = "Result : Please write any Character!";
+        output7.innerHTML = result;
+    }else if(number1 >= 'A' & number1.length == 1){
     var result1 = "Result : Character (";
     var result2 = ") is an alphabet .";
     var result = result1 + number1 + result2;
     output7.innerHTML = result;
   }else {
-    
     var result1 = "Result : Character (";
     var result3 = ") is not an alphabet .";
     var result = result1 + number1 + result3;
